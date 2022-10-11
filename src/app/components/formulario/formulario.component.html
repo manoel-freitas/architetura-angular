@@ -1,0 +1,25 @@
+<form (ngSubmit)="onFormSubmit()" [formGroup]="form" class="form">
+  <h2>{{ nomeForm }}</h2>
+  <br />
+  <div class="form-control">
+    <label for="first-name">Nome: </label>
+    <input id="first-name" type="text" formControlName="nome" />
+    <p>Campo é obrigatório</p>
+  </div>
+
+  <div class="form-control">
+    <label for="last-name">Sobrenome: </label>
+    <input id="last-name" type="text" formControlName="sobrenome" />
+    <p>Campo é obrigatório</p>
+  </div>
+
+  <div class="form-control">
+    <label for="favorite-movie">Filme Favorito: </label>
+    <input id="favorite-movie" type="text" formControlName="filme" />
+    <p>Campo é obrigatório</p>
+  </div>
+  <br />
+  <button class="form-submit" type="submit" [disabled]="!form.valid">
+    Salvar
+  </button>
+</form>
